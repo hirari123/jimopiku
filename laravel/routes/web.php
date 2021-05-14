@@ -22,5 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => '/user', 'middleware' => 'auth'], function(){
     Route::get('index', 'UserController@index')->name('user.index');
     Route::get('userEdit', 'UserController@userEdit')->name('user.userEdit');
-    Ruote::post('userEdit', 'UserController@userUpdate')->name('user.userUpdate');
+    Route::post('userEdit', 'UserController@userUpdate')->name('user.userUpdate');
 });
